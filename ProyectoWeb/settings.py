@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Servicios',
     'blog',
     'contacto',
+    'tienda',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL='/media/servicios/'
 MEDIA_ROOT=BASE_DIR / 'servicios'
+
+EMAIL_BACKEND0="django.core.mail.backends.smtp.EmailBackEnd"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="juanago5026@gmail.com"
+EMAIL_HOST_PASSWORD="LasMelli85"

@@ -3,10 +3,28 @@
 {% load static %} 
 
 {% block content %}
+  
+  <div class="contenedorFormulario">
+
+    {% if "valido" in request.GET %}
+
+       <p style="color: white";>Información enviada correctamente, gracias</p>
+
+    {% endif %}
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      <table class="miForm">
+         {{miFormulario.as_table}}
+      </table>
+     
+      <input type="submit" value="Enviar" style="Width: 150px">
+    </form>
+  </div>
 
 
 
 
-   Contacto
+   
 
 {% endblock %}  
