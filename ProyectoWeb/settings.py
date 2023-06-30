@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'tienda',
     'carro',
     'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,5 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="juanago5026@gmail.com"
 EMAIL_HOST_PASSWORD="LasMelli85"
+
+CRISPY_TEMPLATE_PACK='bootstrap4'

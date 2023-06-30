@@ -1,19 +1,19 @@
 class Carro:
     def __init__(self,request):
-        self.request=request
+        """self.request=request
         self.session=request.session
         carro=self.session.get("carro")
         if not carro:
-            carro=self.session["carro"]={}
+            carro=self.session["carro"]={}"""
         #else:
         self.carro=carro
 
-    def agregar(self, producto):
+    def agregar(self,producto):
         if(str(producto.id) not in self.carro.keys()):
             self.carro[producto.id]={
                 "producto_id":producto.id,
                 "nombre":producto.nombre,
-                "precio": str(producto.precio),
+                "precio":str(producto.precio),
                 "cantidad":1,
                 "imagen":producto.imagen.url
             }
@@ -29,7 +29,7 @@ class Carro:
         self.session["carro"]=self.carro
         self.session.modified=True
 
-    def eliminar(self, producto):
+    def eliminar(self,producto):
         producto.id=str(producto.id)
         if producto.id in self.carro:
             del self.carro[producto.id]
